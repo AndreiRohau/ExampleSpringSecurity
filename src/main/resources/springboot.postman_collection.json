@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "ac974abc-22a8-444e-970e-74393383751f",
+		"name": "springboot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30606564"
+	},
+	"item": [
+		{
+			"name": "get check USER",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "user",
+						"username": "user"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/article/get"
+			},
+			"response": []
+		},
+		{
+			"name": "get check ADMIN",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "admin",
+						"username": "admin"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/article/get"
+			},
+			"response": []
+		},
+		{
+			"name": "create by USER - NO",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "user",
+						"username": "user"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/article/art1?text=some-text",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"article",
+						"art1"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "some-text"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create by ADMIN",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "admin",
+						"username": "admin"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/article/art1?text=some-text",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"article",
+						"art1"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "some-text"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get by USER",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "user",
+						"username": "user"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/article/art1"
+			},
+			"response": []
+		},
+		{
+			"name": "get by ADMIN",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "admin",
+						"username": "admin"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/article/art1"
+			},
+			"response": []
+		},
+		{
+			"name": "update by USER - NO",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "user",
+						"username": "user"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"art2\",\r\n    \"text\": \"updated-text\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/article/art1"
+			},
+			"response": []
+		},
+		{
+			"name": "update by ADMIN",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "admin",
+						"username": "admin"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"art2\",\r\n    \"text\": \"updated-text\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/article/art1"
+			},
+			"response": []
+		},
+		{
+			"name": "get by USER Copy",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "user",
+						"username": "user"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/article/art2"
+			},
+			"response": []
+		},
+		{
+			"name": "delete by USER NO",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "uesr",
+						"username": "user"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8080/article/art2"
+			},
+			"response": []
+		},
+		{
+			"name": "delete by ADMIN",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "admin",
+						"username": "admin"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8080/article/art2"
+			},
+			"response": []
+		}
+	]
+}
