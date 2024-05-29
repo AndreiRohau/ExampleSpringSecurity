@@ -1,6 +1,7 @@
 //package org.example.springbootsecurity.config;
 //
 //import org.example.springbootsecurity.model.User;
+//import org.example.springbootsecurity.service.UserService;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.security.core.authority.SimpleGrantedAuthority;
 //import org.springframework.security.core.userdetails.UserDetails;
